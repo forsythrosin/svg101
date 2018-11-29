@@ -3,6 +3,7 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const autoprefixer = require('autoprefixer');
 
 const webpack = require('webpack');
 const path = require('path');
@@ -28,6 +29,11 @@ module.exports = {
               modules: true,
               importLoaders: true,
               localIdentName: '[hash:base64:12]'
+            }
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer()]
             }
           },
           'sass-loader'
