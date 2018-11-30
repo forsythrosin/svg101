@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  transition: all 200ms;
+}
+
+.logo {
+  font-size: 30px;
+  padding: 20px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+$switch-size: 20px;
+$switch-padding: 2px;
+$switch-border: 2px;
+
+.themeSwitch {
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 12px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+
+  .switch {
+    position: relative;
+    margin-top: 3px;
+    display: inline-block;
+    height: $switch-size;
+    width: 2 * $switch-size;
+    padding: $switch-padding;
+    border-radius: 2 * $switch-size;
+    border-style: solid;
+    border-width: $switch-border;
+
+    .handle {
+      height: $switch-size;
+      width: $switch-size;
+      border-radius: 50%;
+      position: relative;
+      transition: all 200ms;
+
+      &.light {
+        left: 0;
+      }
+
+      &.dark {
+        left: calc(100% - #{$switch-size});
+      }
+    }
+  }
+}

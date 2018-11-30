@@ -12,6 +12,7 @@
         }
       },
       "generateScopedName": "[hash:base64:12]"
-    }]
+    }],
+    "@babel/plugin-proposal-class-properties"
   ]
 }

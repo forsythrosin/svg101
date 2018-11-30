@@ -47,8 +47,10 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "autoprefixer": "^9.3.1",
     "postcss-loader": "^3.0.0",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react-split-pane": "^0.1.84"
   }
 }

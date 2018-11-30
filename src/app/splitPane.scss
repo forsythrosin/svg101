@@ -1,0 +1,42 @@
+$handle-dist: 10px;
+
+:global {
+  .Resizer {
+    background: black;
+    z-index: 1;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    transition: all 200ms;
+    border-color: rgba(128, 128, 128, 0);
+    border-style: solid;
+
+    &:hover, &:active {
+      border-color: rgba(128, 128, 128, 0.1);
+    }
+
+    &.horizontal {
+      height: 11px;
+      margin: -$handle-dist 0;
+      border-top-width: $handle-dist;
+      border-bottom-width: $handle-dist;
+      cursor: row-resize;
+      width: 100%;
+    }
+
+    &.vertical {
+      width: 11px;
+      margin: 0 -$handle-dist;
+      border-left-width: $handle-dist;
+      border-right-width: $handle-dist;
+      cursor: col-resize;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+
+    &.disabled:hover {
+      border-color: transparent;
+    }
+  }
+}
